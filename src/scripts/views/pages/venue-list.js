@@ -1,4 +1,4 @@
-import { createRestoItemTemplate } from '../templates/template-creator';
+import { createVenueItemTemplate } from '../templates/template-creator';
 import DATA from '../../data/venue.json';
 
 const VenueList = {
@@ -17,7 +17,7 @@ const VenueList = {
 
     if (DATA.restaurants.length !== 0) {
       DATA.restaurants.forEach((venue) => {
-        venuesContainer.innerHTML += createRestoItemTemplate(venue);
+        venuesContainer.innerHTML += createVenueItemTemplate(venue);
       });
     }
   },
