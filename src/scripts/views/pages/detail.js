@@ -1,6 +1,7 @@
 import UrlParser from '../../routes/url-parser';
-import { createVenueDetailTemplate, createLikeButtonTemplate } from '../templates/template-creator';
+import { createVenueDetailTemplate } from '../templates/template-creator';
 import DATA from '../../data/venue.json';
+import LikeButtonInitiator from '../../utils/like-button-initiator';
 
 const Detail = {
   async render() {
@@ -19,10 +20,18 @@ const Detail = {
       if (venueUrlId === venue.id) {
         venueContainer.innerHTML = createVenueDetailTemplate(venue);
       }
-    });
 
-    const likeButtonContainer = document.querySelector('#likeButtonContainer');
-    likeButtonContainer.innerHTML = createLikeButtonTemplate();
+      LikeButtonInitiator.init({
+        likeButtonContainer: document.querySelector('#likeButtonContainer'),
+        venue: {
+          id: venue.id,
+          name: venue.name,
+          description: venue.description,
+          rating: venue.rating,
+          pictureId: venue.pictureId,
+        },
+      });
+    });
   },
 };
 
