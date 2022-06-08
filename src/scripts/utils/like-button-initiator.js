@@ -1,4 +1,4 @@
-import FavoriteVenueIdb from '../data/favoritevenue-idb';
+import WishlistVenueIdb from '../data/wishlistvenue-idb';
 import { createLikeButtonTemplate, createLikedButtonTemplate } from '../views/templates/template-creator';
 
 const LikeButtonInitiator = {
@@ -20,7 +20,7 @@ const LikeButtonInitiator = {
   },
 
   async _isVenueExist(id) {
-    const venue = await FavoriteVenueIdb.getVenue(id);
+    const venue = await WishlistVenueIdb.getVenue(id);
     return !!venue;
   },
 
@@ -29,7 +29,7 @@ const LikeButtonInitiator = {
 
     const likeButton = document.querySelector('#likeButton');
     likeButton.addEventListener('click', async () => {
-      await FavoriteVenueIdb.putVenue(this._venue);
+      await WishlistVenueIdb.putVenue(this._venue);
       this._renderButton();
     });
   },
@@ -39,7 +39,7 @@ const LikeButtonInitiator = {
 
     const likeButton = document.querySelector('#likeButton');
     likeButton.addEventListener('click', async () => {
-      await FavoriteVenueIdb.deleteVenue(this._venue.id);
+      await WishlistVenueIdb.deleteVenue(this._venue.id);
       this._renderButton();
     });
   },

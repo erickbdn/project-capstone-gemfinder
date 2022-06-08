@@ -1,10 +1,10 @@
 import VenueList from '../views/pages/venue-list';
-import Favorite from '../views/pages/favorite';
+import Wishlist from '../views/pages/wishlist';
 import Detail from '../views/pages/detail';
 
 const routes = {
   '/': VenueList,
-  '/favorite': Favorite,
+  '/wishlist': Wishlist,
   '/detail/:id': Detail,
 };
 

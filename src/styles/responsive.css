@@ -28,20 +28,20 @@
       margin: 0;
     }
    
-    .movies {
+    .venue-list {
       grid-template-columns: 1fr 1fr;
     }
    
-    .movie {
+    .venue {
       grid-template-columns: auto 1fr;
     }
    
-    .movie .movie__title {
+    .venue .venue__title {
       grid-column-start: 1;
       grid-column-end: 3;
     }
    
-    .movie .movie__overview {
+    .venue .item__description {
       grid-column-start: 1;
       grid-column-end: 3;
     }
@@ -54,19 +54,19 @@
   }
    
   @media screen and (min-width: 850px) {
-    .movies {
+    .venue-list {
       grid-template-columns: repeat(3, 1fr);
     }
   }
    
   @media screen and (min-width: 1200px) {
-    .movies {
+    .venue-list {
       grid-template-columns: repeat(4, 1fr);
     }
   }
    
   @media screen and (min-width: 1600px) {
-    .movies {
+    .venue-list {
         grid-template-columns: repeat(5, 1fr);
     }
   }

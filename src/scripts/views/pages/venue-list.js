@@ -6,7 +6,7 @@ const VenueList = {
     return `
       <h2>Venue All Star</h2>
 
-      <div class="venue">
+      <div class="content">
         <div id="venue-list" class="venue-list"></div>
       </div>
     `;

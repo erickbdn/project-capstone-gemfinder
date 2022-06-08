@@ -19,18 +19,18 @@ const Detail = {
     DATA.restaurants.forEach((venue) => {
       if (venueUrlId === venue.id) {
         venueContainer.innerHTML = createVenueDetailTemplate(venue);
-      }
 
-      LikeButtonInitiator.init({
-        likeButtonContainer: document.querySelector('#likeButtonContainer'),
-        venue: {
-          id: venue.id,
-          name: venue.name,
-          description: venue.description,
-          rating: venue.rating,
-          pictureId: venue.pictureId,
-        },
-      });
+        LikeButtonInitiator.init({
+          likeButtonContainer: document.querySelector('#likeButtonContainer'),
+          venue: {
+            id: venue.id,
+            name: venue.name,
+            description: venue.description,
+            rating: venue.rating,
+            pictureId: venue.pictureId,
+          },
+        });
+      }
     });
   },
 };

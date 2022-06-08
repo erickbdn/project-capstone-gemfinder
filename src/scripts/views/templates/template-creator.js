@@ -1,23 +1,24 @@
 const createVenueItemTemplate = (venue) => `
-    <article tabindex="-1" class="post-item">
-    <img tabindex="0" 
-        class="post-item__thumbnail" 
-        src="${venue.pictureId}" 
-        alt="Salah satu gambar venue." 
-        height="250px"
-    >
-    <div class="post-item__content">
-        <h1 tabindex="-1" class="post-item__title">
-            <a tabindex="0" href="${`/#/detail/${venue.id}`}">
-                ${venue.name}
-            </a> 
-            <span tabindex="0" class="post-item_star">
-                &bigstar; ${venue.rating}
-            </span>
-        </h1>
-        <p tabindex="0" class="post-item__description">${venue.description}</p>
+  <div class="venue-item">
+    <div class="venue-item__header">
+        <img tabindex="0" 
+            class="venue-item__header__poster" 
+            src="${venue.pictureId}" 
+            alt="${venue.name}." 
+            height="170px"
+       />
     </div>
-    </article>
+    <div class="venue-item__content">
+      <h1 tabindex="-1" class="venue-item__title">
+        <a tabindex="0" class="venue-item__content__link" href="${`/#/detail/${venue.id}`}">
+          <span class=  venue-item__content__title>
+            ${venue.name}
+          </span>
+        </a>
+      </h1>
+      <p tabindex="0" class="venue-item__description">${venue.description}</p>
+    </div>
+  </div>
 `;
 
 const createVenueDetailTemplate = (venue) => `
@@ -40,13 +41,13 @@ const createVenueDetailTemplate = (venue) => `
 `;
 
 const createLikeButtonTemplate = () => `
-  <button aria-label="like this movie" id="likeButton" class="like">
+  <button aria-label="like this venue" id="likeButton" class="like">
      <i class="fa fa-heart-o" aria-hidden="true"></i>
   </button>
 `;
 
 const createLikedButtonTemplate = () => `
-  <button aria-label="unlike this movie" id="likeButton" class="like">
+  <button aria-label="unlike this venue" id="likeButton" class="like">
     <i class="fa fa-heart" aria-hidden="true"></i>
   </button>
 `;
