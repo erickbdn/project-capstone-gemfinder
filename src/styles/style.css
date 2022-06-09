@@ -11,7 +11,6 @@
     flex-direction: column;
   }
    
-   
   /*
     AppBar
   */
@@ -34,7 +33,7 @@
   }
    
   .app-bar .app-bar__menu button {
-    background-color: transparent;
+    background-color: white;
     border: none;
     font-size: 18px;
     padding: 8px;
@@ -59,7 +58,7 @@
     width: 150px;
     transition: all 0.3s;
     padding: 8px;
-    background-color: white;
+    background-color: transparent;
     overflow: hidden;
   }
    
@@ -78,6 +77,55 @@
   .app-bar .app-bar__navigation ul li a:hover{
     color: #db0000;
   }
+
+  /* 
+    Hero
+  */
+
+  .hero {
+    display: block;
+    min-height: 380px;
+    width: 95%;
+    text-align: center;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    border: 3px solid #db0000;
+  }
+  .hero__title {
+      margin-top: 150px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 20px;
+      text-shadow: 0 2px 7px #000;
+  }
+  .hero__tagline {
+      color: #fff;
+      margin-bottom: 20px;
+      font-size: 18px;
+      font-weight: 300;
+  }
+
+  a.btn {
+    padding: 15.5px 33px;
+  }
+  .btn {
+      background-color: aliceblue;
+      border-radius: 20px;
+      transition: 0.1s;
+      font-weight: 600;
+  }
+  .btn:hover {
+      padding: 13.5px 31px;
+      transition: 0.1s;
+  }
+  a.btn {
+      color: black;
+      text-decoration: none;
+  }
+  .empty{
+    margin-bottom: 400px;
+  }
    
   /*
     Main Content
@@ -89,6 +137,9 @@
   }
   main h2{
     text-align: center;
+  }
+  main .hero{
+    padding: 0;
   }
    
   .content {

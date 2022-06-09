@@ -1,3 +1,13 @@
+@media screen and (max-width: 1200px){
+  .hero{
+      position: absolute;
+      top: 70px;
+      right: 0;
+      left: 0;
+      box-sizing: border-box;
+  }
+}
+
 @media screen and (min-width: 650px) {
     .app-bar {
       grid-template-columns: 1fr auto;
@@ -27,7 +37,18 @@
       text-align: center;
       margin: 0;
     }
-   
+
+    .hero{
+      position: absolute;
+      margin-top: -10px;
+      box-sizing: border-box;
+
+      background-image: url('/heros/Raja-Ampat-2.jpg');
+    }
+    .hero .hero__title{
+      font-size: 30px;
+    }
+
     .venue-list {
       grid-template-columns: 1fr 1fr;
     }
