@@ -4,10 +4,10 @@ import homePage from '../views/pages/home-page';
 import Wishlist from '../views/pages/wishlist';
 
 const routes = {
-  '/': homePage, // default page
+  '/': homePage,
   '/wishlist': Wishlist,
   '/location': Location,
-  '/locationDetail/:id': locationDetail,
+  '/detail/:id': locationDetail,
 };
 
 export default routes;

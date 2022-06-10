@@ -6,7 +6,7 @@ const Wishlist = {
   },
 
   async afterRender() {
-    // Fungsi ini akan dipanggil setelah render()
+    // after render wishlist
   },
 };
 

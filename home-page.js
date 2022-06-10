@@ -1,3 +1,5 @@
+import LocationSource from '../../data/location-source';
+
 const homePage = {
   async render() {
     return `
@@ -7,11 +9,14 @@ const homePage = {
     <div class="Description">
         <p>GemFinder adalah aplikasi website dimana anda bisa mencari lokasi hidden gem di seluruh Indonesia.</p>
     </div>
+    <div class="findLocation">
+      <a href=#/location>Find Your Destination Location Here</a>
       `;
   },
 
   async afterRender() {
-    // Fungsi ini akan dipanggil setelah render()
+    const locations = await LocationSource.Locations();
+    console.log(locations);
   },
 };
 

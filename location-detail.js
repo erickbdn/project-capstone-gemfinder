@@ -1,12 +1,19 @@
+import UrlParser from '../../routes/url-parser';
+import LocationSource from '../../data/location-source';
+import { createLocationDetailTemplate } from '../templates/template-creator';
+
 const locationDetail = {
   async render() {
     return `
-        <h2>Location Detail Page</h2>
+        <div id="location" class="location"></div>
       `;
   },
 
   async afterRender() {
-    // Fungsi ini akan dipanggil setelah render()
+    const url = UrlParser.parseActiveUrlWithoutCombiner();
+    const details = await LocationSource.detailLocation(url.id);
+    const locationContainer = document.querySelector('#location');
+    locationContainer.innerHTML = createLocationDetailTemplate(details);
   },
 };
 

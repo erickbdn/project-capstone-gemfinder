@@ -2,6 +2,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
+// const { SourceMapDevToolPlugin } = require("webpack");
 
 module.exports = {
   entry: path.resolve(__dirname, 'src/scripts/index.js'),
@@ -20,6 +21,9 @@ module.exports = {
           {
             loader: 'css-loader',
           },
+          // {
+          //   loader: 'source-map-loader',
+          // },
         ],
       },
       {
@@ -31,6 +35,9 @@ module.exports = {
     ],
   },
   plugins: [
+    // new SourceMapDevToolPlugin({
+    //   filename: '[file].map'
+    // }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src/templates/index.html'),
       filename: 'index.html',
