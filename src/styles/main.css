@@ -1,0 +1,426 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+body, html {
+    margin: 0;
+    padding: 0;
+	  background-color: #ffffff;
+  	scroll-behavior: smooth;
+}
+   
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+   
+   
+  /*
+    AppBar
+  */
+   
+  .app-bar {
+    padding: 8px 16px;
+    background-color: #028075;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  }
+   
+  .app-bar .app-bar__menu {
+    display: flex;
+    align-items: center;
+  }
+   
+  .app-bar .app-bar__menu button {
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    padding: 8px;
+    cursor: pointer;
+  }
+   
+  .app-bar .app-bar__brand {
+    display: flex;
+    align-content: stretch;
+  }
+   
+  .app-bar__brand h1 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 22px;
+    user-select: none;
+    margin-top: 5px;
+  }
+   
+  .app-bar .app-bar__navigation {
+    position: absolute;
+    top: 50px;
+    left: -180px;
+    width: 150px;
+    transition: all 0.3s;
+    padding: 8px;
+    background-color: none;
+    overflow: hidden;
+  }
+   
+  .app-bar .app-bar__navigation.open {
+    left: 0;
+  }
+   
+  .app-bar .app-bar__navigation ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 8px;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+
+  .app-bar .app-bar__navigation ul li a:hover {
+    display: block;
+    background: #028075;
+    border-radius: 100px;
+  }
+
+  #hamburgerButton {
+    background-color: #028075;
+    border: none;
+    color: #fff;
+    font-size: 32px;
+    margin: 0 5%;
+    display: block;
+    min-width: 44px;
+    min-height: 44px;
+    }
+
+/* hero */
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 430px;
+  width: 100%;
+  text-align: center;
+  object-fit: cover; 
+  background-image: linear-gradient(rgba(0, 0, 5, .5), rgba(0, 0, 5, .5)), url('/images/heros/raja-ampat.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero__inner {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.hero__title {
+  color: #fff;
+  font-weight: 500;
+  font-size: 36px;
+  font-weight: bolder;
+}
+
+.hero__title2 {
+  color: #fff;
+  font-weight: 500;
+  font-size: 36px;
+}
+
+.hero__tagline {
+  color: #fff;
+  margin-top: 16px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+main {
+	width: 100%;
+	margin: 0 auto;
+  }
+  
+  .container {
+	margin: 2em;
+	padding: 1em;
+	max-width: 100%;
+  }
+  
+  .main-content__title {
+	text-align: center;
+	margin-bottom: 0.5em;
+  }
+
+  /*
+ * headline
+ */
+
+.headline {
+  overflow: auto;
+}
+
+.headline__figure {
+  width: 450px;
+  float: left;
+}
+
+.headline__figure img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.headline__figure figcaption {
+  text-align: center;
+  color: #666666;
+  font-size: 13px;
+  font-weight: 400;
+  margin-top: 8px;
+}
+
+.headline__content {
+  width: 600px;
+  float: left;
+  padding: 16px 32px;
+  margin-bottom: 50px;
+}
+
+.headline__title {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.headline__description {
+  font-size: 16px;
+  margin-top: 12px;
+}
+
+.headline__button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  margin-top: 24px;
+  cursor: pointer;
+  padding: 8px 16px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  background-color: #2c3e50;
+  transition: opacity 0.3s;
+}
+
+.headline__button:hover {
+  opacity: 0.8;
+}
+  
+  #explore-restaurant {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+	justify-items: center;
+	justify-content: center;
+  }
+  
+  .card {
+	width: 500px;
+	text-align: justify;
+	border-radius: 10px;
+	transition: 0.3s;
+	background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  }
+  
+  .card:hover {
+	box-shadow: 10px 10px 5px 0 #f0e3ca;
+  }
+  
+  .card-a-tag {
+	text-decoration: none;
+	color: #1b1a17;
+	border: 2px;
+  }
+  
+  .card-rating {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-top-left-radius: 10px;
+	color: white;
+	font-size: large;
+	background-color: #028075;
+	padding: 0.4em 1.3em;
+	z-index: 1;
+  }
+  
+  .card-rating .fa {
+	font-size: smaller;
+	padding: 0.3em 0.8em 0.3em 0;
+	color: yellow;
+  }
+  
+  .img-container {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	max-height: 600px;
+  }
+  
+  .card-image {
+	width: 100%;
+	height: 270px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	object-fit: cover;
+	object-position: center;
+  }
+  
+  .card-content {
+	padding: 1.4em 2em;
+	font-size: small;
+	text-align: center;
+  }
+  
+  .card-content-title {
+	font-weight: bold;
+	text-align: left;
+	padding-bottom: 0.376em;
+	color: #028075;
+	cursor: pointer;
+  }
+
+  .card-city {
+	color: #000;
+	text-align: left;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 10px;
+  }
+  
+  .truncate {
+	margin-bottom: 10px;
+	font-size: 13px;
+	text-align: justify;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 5;
+	-webkit-box-orient: vertical;
+  }
+
+  .btn {
+    margin: 2em;
+    padding: 0.5em 1em;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #028075;
+    border: 1px solid transparent;
+    font-size: large;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .submit-btn {
+    padding: 0.5em 1em;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #028075;
+    border: 1px solid transparent;
+    font-size: large;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .btn:hover,
+  .submit-btn:hover {
+    background-color: #04aa9c;
+  }
+
+  .section-title h2 {
+    text-align: left;
+    color: #028075;
+  }
+
+  .card-img-inspiration {
+    width: 200px;
+    height: 200px;
+	  border-radius: 10px;
+	  transition: 0.3s;
+	  background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+
+  .col-ig-item {
+    width: 100%;
+	  position: relative;
+	  overflow: hidden;
+	  max-height: 600px;
+  }
+
+  .col-ig-item1 {
+    width: 100%;
+	  position: relative;
+	  overflow: hidden;
+	  max-height: 600px;
+  }
+
+  .col-ig-item2 {
+    width: 100%;
+	  position: relative;
+	  overflow: hidden;
+	  max-height: 600px;
+  }
+
+  .col-ig-item3 {
+    width: 100%;
+	  position: relative;
+	  overflow: hidden;
+	  max-height: 600px;
+  }
+
+  .img-item-card {
+    width: 100%;
+	  height: 200px;
+	  border-radius: 10px;
+	  object-fit: cover;
+	  object-position: center;
+  }
+
+  footer {
+    padding: 20px;
+    color: white;
+    background-color: #028075;
+    text-align: center;
+    font-weight: 400;
+    font-size: 20px;
+    font-weight: bold;
+ }
+
+footer p {
+	font-family: 'Pacifico', cursive;
+	letter-spacing: 3px;
+}
+
+  .skip-link {
+	position: absolute;
+	top: -100px;
+	left: 0;
+	background-color: #bf1722;
+	color: white;
+	padding: 10px;
+	font-size: 20px;
+	z-index: 100;
+	text-decoration: none
+}
+.skip-link:focus {
+	top: 70px
+}
