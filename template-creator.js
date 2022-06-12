@@ -6,17 +6,17 @@ const createLocationDetailTemplate = (details) => `
 
 <div class="location_info">
     <div class="location_info_content">
-        <h2>Nama Lokasi</h2>
+        <h3>Nama Lokasi</h3>
         <p class="location_name">${details.name}</p>
-        <h2>Kabupaten / Kota</h2>
+        <h3>Kabupaten / Kota</h3>
         <p class="location_kabupatenkota">${details.kabupatenkota}</p>
-        <h2>Provinsi</h2>
+        <h3>Provinsi</h3>
         <p class="location_provinsi">${details.provinsi}</p>
-        <h2>Alamat</h2>
+        <h3>Alamat</h3>
         <p class="location_address">${details.address}</p>
-        <h2>Deskripsi</h2>
+        <h3>Deskripsi</h3>
         <p class="location_description">${details.description}</p>
-        <h2>Rating</h2>
+        <h3>Rating</h3>
         <p class="location_rating">${details.rating}</p>
     </div>
 </div>

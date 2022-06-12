@@ -1,0 +1,14 @@
+{
+    "name": "GemFinder",
+    "short_name": "GemFinder",
+    "description": "Find Your Destination Here With GemFinder",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#fef5ef",
+    "theme_color": "#d6e3f8",
+    "icons": [
+        {
+            
+        }
+    ]
+}

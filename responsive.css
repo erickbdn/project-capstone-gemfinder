@@ -2,7 +2,8 @@
     .nav-bar {
         grid-template-columns: 1fr auto;
         padding: 8px 32px;
-        background-color: #9d5c63;
+        background-color: #d6e3f8;
+        color: black;
     }
    
     .nav-bar .nav-bar_name h1 {
@@ -16,7 +17,8 @@
     .nav-bar .nav-bar_navigation {
         position: static;
         width: 100%;
-        background-color: #9d5c63;
+        background-color: #d6e3f8;
+        color: black;
     }
    
     .nav-bar .nav-bar_navigation ul li {
@@ -28,7 +30,7 @@
         width: 120px;
         text-align: center;
         margin: 0;
-        color: white;
+        color: black;
     }
    
    

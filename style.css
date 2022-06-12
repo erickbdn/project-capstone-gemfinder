@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 
 body {
@@ -15,8 +16,8 @@ body {
 
 .nav-bar {
     padding: 8px 16px;
-    color: white;
-    background-color: #9d5c63;
+    color: black;
+    background-color: #d6e3f8;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     display: grid;
     grid-template-columns: auto 1fr auto;
@@ -44,14 +45,18 @@ body {
     align-items: center;
   }
 
+  .nav-bar .nav-bar_name .logo {
+    margin-right: 10px;
+  }
+
   .nav-bar .nav-bar_name h1 {
-    color: white;
+    color: black;
     font-size: 22px;
   }
 
   .nav-bar .nav-bar_brand a{
     text-decoration: none;
-    color: white;
+    color: black;
     padding: 1.3em;
   }
   
@@ -93,18 +98,23 @@ body {
 
   .hero-inner {
     margin: 0 auto;
-    max-width: 800px;
     color: black;
+    height: 200px;
+    width: 800px;
     background-color: white;
     border-radius: 8px;
-    padding: 16px;
     opacity: 75%;
+  }
+
+  .hero-inner h1 {
+    margin-top: 10%;
   }
 
   .hero_title {
     color: white;
     font-weight: 500;
     font-size: 36px;
+    margin-top: 100px;
   }
 
   /* Main */
@@ -112,6 +122,10 @@ body {
   main {
     padding: 32px;
     flex: 1;
+  }
+
+  #query {
+    padding: 1.3em;
   }
 
   .getStarted {
@@ -126,16 +140,79 @@ body {
     padding-top: 16px;
   }
 
+  .findLocation {
+    text-align: center;
+    margin-top: 36px;
+  }
+
+  .findLocationBtn {
+    border-radius: 18px;
+    background-color: #e4bb97;
+    width: auto;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    padding: 1.3em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .content {
+    margin: 0 auto;
+    min-height: 100%;
+    padding-top: 36px;
+  }
+
+  .content .content-heading {
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 16px;
+    width: auto;
+    background-color: #fef5ef;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .locations {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin: 32px 0;
+  }
+
+  .location-item {
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #d6e3f8;
+  }
+
+  .location-item-header {
+    position: relative;
+  }
+
+  .location-item .location-item-header .location-item-header-rating {
+    /* position: absolute;
+    padding: 8px;
+    top: 15px;
+    width: 75px;
+    left: 0;
+    display: inline-block;
+    background-color: black;
+    color: white;
+    font-weight: bolder; */
+  }
+
   /* Footer */
 
   footer {
     padding: 16px;
-    background-color: #9d5c63;
+    background-color: #d6e3f8;
   }
    
   footer p {
     text-align: center;
-    color: white;
+    color: black;
   }
    
   /* footer p a {

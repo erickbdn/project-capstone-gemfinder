@@ -1,4 +1,6 @@
+/* eslint-disable no-console */
 import LocationSource from '../../data/location-source';
+import { createLocationItemTemplate } from '../templates/template-creator';
 
 const homePage = {
   async render() {
@@ -7,16 +9,26 @@ const homePage = {
         <h1>Get Started</h1>
     </div>
     <div class="Description">
-        <p>GemFinder adalah aplikasi website dimana anda bisa mencari lokasi hidden gem di seluruh Indonesia.</p>
+        <p>Cari lokasi destinasi wisata hidden gem dengan GemFinder!</p>
     </div>
     <div class="findLocation">
-      <a href=#/location>Find Your Destination Location Here</a>
+     <a class="findLocationBtn" href=#/location>Find Your Destination Location Here</a>
+    </div>
+    <div class="content">
+          <h2 class="content-heading">Recommended Locations</h2>
+          <div id=locations class="locations">
+
+          </div>
+    </div>  
       `;
   },
 
   async afterRender() {
     const locations = await LocationSource.Locations();
-    console.log(locations);
+    const locationsContainer = document.querySelector('#locations');
+    locations.slice(0, 5).forEach((location) => {
+      locationsContainer.innerHTML += createLocationItemTemplate(location);
+    });
   },
 };
 
