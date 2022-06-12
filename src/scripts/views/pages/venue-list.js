@@ -52,8 +52,8 @@ const VenueList = {
   async afterRender() {
     const venuesContainer = document.querySelector('#venue-list');
 
-    if (DATA.restaurants.length !== 0) {
-      DATA.restaurants.forEach((venue) => {
+    if (DATA.venues.length !== 0) {
+      DATA.venues.forEach((venue) => {
         venuesContainer.innerHTML += createVenueItemTemplate(venue);
       });
     }

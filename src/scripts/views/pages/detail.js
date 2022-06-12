@@ -16,7 +16,7 @@ const Detail = {
     const venueUrlId = url.id;
 
     const venueContainer = document.querySelector('#venue');
-    DATA.restaurants.forEach((venue) => {
+    DATA.venues.forEach((venue) => {
       if (venueUrlId === venue.id) {
         venueContainer.innerHTML = createVenueDetailTemplate(venue);
 
@@ -25,6 +25,9 @@ const Detail = {
           venue: {
             id: venue.id,
             name: venue.name,
+            kabupatenkota: venue.kabupatenkota,
+            provinsi: venue.provinsi,
+            address: venue.address,
             description: venue.description,
             rating: venue.rating,
             pictureId: venue.pictureId,
