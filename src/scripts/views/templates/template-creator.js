@@ -27,10 +27,10 @@ const createVenueDetailTemplate = (venue) => `
   <div class="venue__info">
   <h3>Information</h3>
     <h4>City</h4>
-    <p>${venue.city}</p>
+    <p>${venue.kabupatenkota}</p>
     <h4>Rating</h4>
     <p>${venue.rating}</p>
-    <h4>Duration</h4>
+    <h4>Description</h4>
     <p>${venue.description}</p>
   </div>
   <div class="venue__overview">
