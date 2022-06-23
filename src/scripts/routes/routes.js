@@ -1,13 +1,13 @@
-import Location from '../views/pages/location';
-import locationDetail from '../views/pages/location-detail';
-import homePage from '../views/pages/home-page';
+import VenueList from '../views/pages/venue-list';
+import VenueFullList from '../views/pages/venue-full-list';
 import Wishlist from '../views/pages/wishlist';
+import Detail from '../views/pages/detail';
 
 const routes = {
-  '/': homePage,
+  '/': VenueList,
+  '/list': VenueFullList,
   '/wishlist': Wishlist,
-  '/location': Location,
-  '/detail/:id': locationDetail,
+  '/detail/:id': Detail,
 };
 
 export default routes;
