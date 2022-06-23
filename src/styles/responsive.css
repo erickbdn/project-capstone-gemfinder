@@ -1,55 +1,93 @@
+@media screen and (max-width: 1200px){
+  .hero{
+      position: absolute;
+      top: 70px;
+      right: 0;
+      left: 0;
+      box-sizing: border-box;
+  }
+}
+
 @media screen and (min-width: 650px) {
-    .nav-bar {
-        grid-template-columns: 1fr auto;
-        padding: 8px 32px;
-        background-color: #d6e3f8;
-        color: black;
+    .app-bar {
+      grid-template-columns: 1fr auto;
+      padding: 8px 32px;
     }
    
-    .nav-bar .nav-bar_name h1 {
-        font-size: 1.5em;
+    .app-bar .app-bar__brand h1 {
+      font-size: 1.5em;
     }
    
-    .nav-bar .nav-bar_menu {
-        display: none;
+    .app-bar .app-bar__menu {
+      display: none;
     }
    
-    .nav-bar .nav-bar_navigation {
-        position: static;
-        width: 100%;
-        background-color: #d6e3f8;
-        color: black;
+    .app-bar .app-bar__navigation {
+      position: static;
+      width: 100%;
     }
    
-    .nav-bar .nav-bar_navigation ul li {
-        display: inline-block;
+    .app-bar .app-bar__navigation ul li {
+      display: inline-block;
     }
    
-    .nav-bar .nav-bar_navigation ul li a {
-        display: inline-block;
-        width: 120px;
-        text-align: center;
-        margin: 0;
-        color: black;
+    .app-bar .app-bar__navigation ul li a {
+      display: inline-block;
+      width: 120px;
+      text-align: center;
+      margin: 0;
+    }
+
+    .hero{
+      position: absolute;
+      margin-top: -10px;
+      box-sizing: border-box;
+
+      background-image: url('/heros/Raja-Ampat-2.jpg');
+    }
+    .hero .hero__title{
+      font-size: 30px;
+    }
+
+    .venue-list {
+      grid-template-columns: 1fr 1fr;
     }
    
+    .venue {
+      grid-template-columns: auto 1fr;
+    }
    
+    .venue .venue__title {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+   
+    .venue .item__description {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
   }
    
   @media screen and (min-width: 800px) {
-    .nav-bar .nav-bar_name h1 {
-        font-size: 2em;
+    .app-bar .app-bar__brand h1 {
+      font-size: 2em;
     }
   }
    
   @media screen and (min-width: 850px) {
-   
+    .venue-list {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
    
   @media screen and (min-width: 1200px) {
-    
+    .venue-list {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
    
   @media screen and (min-width: 1600px) {
-   
+    .venue-list {
+        grid-template-columns: repeat(5, 1fr);
+    }
   }
