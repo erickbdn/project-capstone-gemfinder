@@ -21,7 +21,7 @@ const createVenueItemTemplate = (venue) => `
   </div>
 `;
 
-const createVenueDetailTemplate = (venue) => `
+const createVenueDetailTemplate = (venue, jumlahPuskesmas) => `
   <h2 class="venue__title">${venue.name}</h2>
   <img class="venue__poster" src="${venue.pictureId}" alt="${venue.name}" />
   <div class="venue__info">
@@ -36,6 +36,8 @@ const createVenueDetailTemplate = (venue) => `
   <div class="venue__overview">
     <h3>Overview</h3>
     <p>${venue.rating}</p>
+    <h3>Jumlah Puskesmas</h3>
+    <p>Tercatat Terdapat Sekitar ${jumlahPuskesmas} Puskesmas yang Menyediakan Vaksin COVID-19 di daerah ${venue.kabupatenkota}</p>
   </div>
 </div>
 `;

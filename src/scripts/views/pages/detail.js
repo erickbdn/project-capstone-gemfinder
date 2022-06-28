@@ -18,7 +18,18 @@ const Detail = {
     const venueContainer = document.querySelector('#venue');
     DATA.venues.forEach((venue) => {
       if (venueUrlId === venue.id) {
-        venueContainer.innerHTML = createVenueDetailTemplate(venue);
+        let jumlahPuskesmas = 0;
+        fetch(`https://kipi.covid19.go.id/api/get-faskes-vaksinasi?city=${venue.kabupatenkota}`)
+          .then((response) => response.json())
+          .then((responseJson) => {
+            if (responseJson.message === 'Success') {
+              jumlahPuskesmas = responseJson.count_total;
+            } else {
+              // eslint-disable-next-line prefer-promise-reject-errors
+              return Promise.reject('Data is Not Found!');
+            }
+            venueContainer.innerHTML = createVenueDetailTemplate(venue, jumlahPuskesmas);
+          });
 
         LikeButtonInitiator.init({
           likeButtonContainer: document.querySelector('#likeButtonContainer'),
