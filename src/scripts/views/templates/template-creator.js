@@ -33,6 +33,9 @@ const createVenueDetailTemplate = (detail) => `
   <h3>Information</h3>
     <h4>City</h4>
     <p>${detail.kabupatenkota}</p>
+    <h4>Covid Risk Score</h4>
+    <h4>Address</h4>
+    <p>${detail.address}</p>
     <h4>Rating</h4>
     <p>${detail.rating}</p>
     <h4>Description</h4>
@@ -41,8 +44,15 @@ const createVenueDetailTemplate = (detail) => `
   <div class="venue__overview">
     <h3>Overview</h3>
     <p>${detail.rating}</p>
+    <h3>Jumlah Puskesmas</h3>
+    <p>Tercatat Terdapat Sekitar ${jumlahPuskesmas} Puskesmas yang Menyediakan Vaksin COVID-19 di daerah ${detail.kabupatenkota}</p>
   </div>
 </div>
+`;
+
+const createRiskTemplate = (kota) => `
+<p>${kota}</p>
+<p>${hasil}</p>
 `;
 
 const createLikeButtonTemplate = () => `
@@ -62,4 +72,5 @@ export {
   createVenueDetailTemplate,
   createLikeButtonTemplate,
   createLikedButtonTemplate,
+  createRiskTemplate,
 };
