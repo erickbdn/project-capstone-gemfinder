@@ -11,6 +11,18 @@ class LocationSource {
     const response = await fetch(API_ENDPOINT.DETAIL(id));
     return response.json();
   }
+
+  static async riskScoreCovid() {
+    const response = await fetch(API_ENDPOINT.COVID, {
+      method: 'GET',
+      mode: 'no-cors',
+      contentType: 'application/json',
+      headers: {
+        'Access-Control-Allow-Headers': '*',
+      },
+    });
+    return response.json();
+  }
 }
 
 export default LocationSource;
