@@ -7,28 +7,46 @@ const Detail = {
   async render() {
     return `
       <div id="venue" class="venue"></div>
+      <div id="risk" class="risk"</div>
       <div id="likeButtonContainer"></div>
     `;
   },
 
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
-    const details = await LocationSource.detailLocation(url.id);
+    const detail = await LocationSource.detailLocation(url.id);
     const locationContainer = document.querySelector('#venue');
-    locationContainer.innerHTML = createVenueDetailTemplate(details);
+    // locationContainer.innerHTML = createVenueDetailTemplate(details);
 
-    LikeButtonInitiator.init({
-      likeButtonContainer: document.querySelector('#likeButtonContainer'),
-      details: {
-        id: details.id,
-        name: details.name,
-        rating: details.rating,
-        kabupatenkota: details.kabupatenkota,
-        provinsi: details.provinsi,
-        address: details.address,
-        description: details.description,
-        image: details.image,
-      },
+    detail.forEach((details) => {
+      if (detail === details.id) {
+        let jumlahPuskesmas = 0;
+        fetch(`https://kipi.covid19.go.id/api/get-faskes-vaksinasi?city=${details.kabupatenkota}`)
+          .then((response) => response.json())
+          .then((responseJson) => {
+            if (responseJson.message === 'Success') {
+              jumlahPuskesmas = responseJson.count_total;
+            } else {
+              // eslint-disable-next-line prefer-promise-reject-errors
+              return Promise.reject('Data is Not Found!');
+            }
+            locationContainer.innerHTML = createVenueDetailTemplate(details, jumlahPuskesmas);
+          });
+
+        LikeButtonInitiator.init({
+          likeButtonContainer: document.querySelector('#likeButtonContainer'),
+          details: {
+            id: details.id,
+            name: details.name,
+            rating: details.rating,
+            kabupatenkota: details.kabupatenkota,
+            provinsi: details.provinsi,
+            address: details.address,
+            description: details.description,
+            image: details.image,
+          },
+        });
+      }
     });
   },
 };

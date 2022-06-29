@@ -5,7 +5,7 @@ const Wishlist = {
   async render() {
     return `
       <div class="content">
-        <h2 class="content__heading">Your Wishlistd Venue</h2>
+        <h2 class="content__heading">Your Wishlisted Venue</h2>
         <div id="venue-list" class="venue-list">
  
         </div>

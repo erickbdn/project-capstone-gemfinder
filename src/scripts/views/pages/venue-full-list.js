@@ -12,9 +12,9 @@ const VenueFullList = {
         </div>
       </div>
       <h1 class="empty"></h1>
-
-      <h2>Venue All Star</h2>
-
+      <div class="break-line">
+        <h2>Venue All Star</h2>
+      </div>
       <div class="content">
         <div id="venue-list" class="venue-list"></div>
       </div>
