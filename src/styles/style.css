@@ -4,8 +4,8 @@
   }
    
   body {
-    font-family: Georgia, Arial, sans-serif;
-    background-color: white;
+    font-family: 'Acme', sans-serif;
+    background-color: #011936ff;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -17,14 +17,16 @@
    
   .app-bar {
     padding: 8px 16px;
-    background-color: white;
+    background-color: #ed254eff;
     display: grid;
     grid-template-columns: auto 1fr auto;
     gap: 10px;
     position: sticky;
     top: 0;
     z-index: 99;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
   }
    
   .app-bar .app-bar__menu {
@@ -33,7 +35,7 @@
   }
    
   .app-bar .app-bar__menu button {
-    background-color: white;
+    background-color: #ed254eff;
     border: none;
     font-size: 18px;
     padding: 8px;
@@ -46,7 +48,7 @@
   }
    
   .app-bar .app-bar__brand h1 {
-    color: #db0000;
+    color: white;
     font-size: 22px;
     user-select: none;
   }
@@ -69,7 +71,7 @@
   .app-bar .app-bar__navigation ul li a {
     display: inline-block;
     text-decoration: none;
-    color: black;
+    color: white;
     padding: 8px;
     margin-bottom: 5px;
     width: 100%;
@@ -90,7 +92,8 @@
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
-    border: 3px solid #db0000;
+    border-width: 8px;
+    border-radius: 10px;
   }
   .hero__title {
       margin-top: 150px;
@@ -155,6 +158,11 @@
     font-weight: normal;
   }
    
+  .break-line {
+    padding-top: 5px;
+    border-bottom: 1px solid #f4fffdff;
+    color: white;
+  }
    
   /*
     Venues
@@ -174,13 +182,16 @@
    
   .venue-item {
     width: 100%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px #737373;
     border-radius: 8px;
     overflow: hidden;
     margin-bottom: 20px;
+    background-color: whitesmoke;
+    transition: transform 0.5s;
   }
   .venue-item:hover {
-      box-shadow: 0 2px 8px 2px rgba(181, 180, 184, 0.9);
+    box-shadow: 5px 5px #737373;
+    transform: translateY(-10px);
   }
 
   .venue-item__header {
@@ -222,6 +233,7 @@
       text-decoration: none;
       color: inherit;
       padding: 13.5px 0;
+      font-weight: bolder;
   }
   .venue-item__title > a:hover{
       color: #db0000;
@@ -287,9 +299,10 @@
 
     text-align: center;
     padding: 40px 20px;
-    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 5px #737373;
     transition: transform 0.5s;
     cursor: pointer;
+    background-color: #f4fffdff;
   }
   .testimonial .col-3:hover{
     transform: translateY(-10px);
