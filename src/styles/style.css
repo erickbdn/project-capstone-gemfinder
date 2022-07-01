@@ -270,6 +270,10 @@
     width: 100%;
     max-width: 400px;
   }
+
+  .venue .venue__info {
+    background-color: white;
+  }
    
   .venue .venue__info h4 {
     margin: 8px 0;
@@ -278,6 +282,32 @@
   /* 
     Testimonial
   */
+
+  .About-Us {
+    color: black;
+    background-color: #fff;
+    border-radius: 8px;
+  }
+  
+  .gem-desc {
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 15px;
+  }
+
+  .gem-desc h3 {
+    text-align: center;
+  }
+
+  .gem-desc p{
+    padding-top: 15px;
+  }
+
+  .kelompok {
+    padding-top: 50px;
+    padding-bottom: 15px;
+  }
+
   .row{
     display: flex;
     align-items: center;
@@ -289,9 +319,43 @@
     margin: auto;
     padding: 0 25px;
   }
+  .row-profile {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 1rem;
+  }
+
+  .row-profile {
+    margin: 0 -5px;
+  }
+
+  .row-profile:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .profile-content {
+    max-width: 250px;
+    padding: 16px;
+    text-align: center;
+    color: white;
+  }
+
+  .profile-content img {
+    width: 100%;
+    object-fit: cover;
+    max-width: 400px;
+    min-height: 250px;
+    max-height: 250px;
+    border-radius: 50%;
+  }
+
   .testimonial{
     padding-top: 30px;
   }
+
   .testimonial .col-3{
     flex-basis: 25%;
     min-width: 250px;
