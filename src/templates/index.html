@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Venues catalogue for you">
+    <meta name="theme-color" content="#db0000"/>
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="favicon.jpg">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://use.fontawesome.com/b070c8f1df.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>GemFinder</title>
+</head>
+
+<body>
+    
+    <a href="#maincontent" class="skip-link">Menuju ke konten</a>
+   
+    <header class="app-bar">
+        <div class="app-bar__brand">
+          <img src="https://erickbdn.github.io/image-hosting/logo.png" width="50" height="50" alt="">
+          <h1>GEMFINDER</h1>
+        </div>
+        <div class="app-bar__menu">
+          <button id="hamburgerButton">☰</button>
+        </div>
+        <nav id="navigationDrawer" class="app-bar__navigation">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#/list">Venues</a></li>
+            <li><a href="#/wishlist">Wishlist</a></li>
+            <li><a href="#/about">About Us</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <section class="hero">
+
+        <div class="swiper hero-slider">
+     
+           <div class="swiper-wrapper">
+     
+              <div class="swiper-slide hero__heading" style="background:url(https://erickbdn.github.io/image-hosting/nature-2.jpg) no-repeat">
+                 <div class="content">
+                  <h3>Explore the hidden beautiful attractions</h3>
+                  <p>Build Your Mood by Having a Fun Trip With Us</p>
+                  <a href="#" class="herobtn">Find Now</a>
+                 </div>
+              </div>
+     
+              <div class="swiper-slide hero__heading" style="background:url(https://erickbdn.github.io/image-hosting/david-marcu-78A265wPiO4-unsplash.jpg) no-repeat">
+                 <div class="content">
+                  <h3>Explore the hidden beautiful attractions</h3>
+                  <p>Build Your Mood by Having a Fun Trip With Us</p>
+                  <a href="#" class="herobtn">Find Now</a>
+                 </div>
+              </div>
+     
+              <div class="swiper-slide hero__heading" style="background:url(https://erickbdn.github.io/image-hosting/nature-1.jpg) no-repeat">
+                 <div class="content">
+                  <h3>Explore the hidden beautiful attractions</h3>
+                  <p>Build Your Mood by Having a Fun Trip With Us</p>
+                  <a href="#/list" class="herobtn">Find Now</a>
+                 </div>
+              </div>
+              
+           </div>
+     
+           <div class="swiper-button-next"></div>
+           <div class="swiper-button-prev"></div>
+     
+        </div>
+     
+     </section>
+      
+    <main id="mainContent"></main>
+
+    <div class="footer-basic">
+      <footer>
+          <div class="social">
+            <a href="#"><i class="icon ion-social-instagram"></i></a>
+            <a href="#"><i class="icon ion-social-github"></i></a>
+            <a href="#"><i class="icon ion-social-twitter"></i></a>
+            <a href="#"><i class="icon ion-social-youtube"></i></a></div>
+          <ul class="list-inline">
+              <li class="list-inline-item"><a href="/">Home</a></li>
+              <li class="list-inline-item"><a href="#/wishlist">Wishlist</a></li>
+              <li class="list-inline-item"><a href="#">Location</a></li>
+              <li class="list-inline-item"><a href="#/about">About Us</a></li>
+          </ul>
+          <p class="copyright">Gem Finder © 2022, All Right Reserved</p>
+      </footer>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".hero-slider", {
+      loop:true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+</body>
+</html>
