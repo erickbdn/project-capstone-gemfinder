@@ -1,0 +1,107 @@
+@media screen and (max-width: 690px){
+  .app-bar{
+    box-sizing: border-box;
+    grid-template-columns: repeat(1,120px);
+    justify-content: center;
+  }
+  .app-bar .app-bar__menu{
+    justify-content: center;
+  }
+  .app-bar .app-bar__navigation {
+    position: absolute;
+    top: -250px;
+    right: auto;
+    left: auto;
+    width: 100%;
+    transition: all 0.3s;
+    padding: 8px;
+    overflow: hidden;
+  }
+   
+  .app-bar .app-bar__navigation.open {
+    top: 119px;
+  }
+  .app-bar .app-bar__navigation ul li a{
+    text-align: center;
+  }
+  .recommendation-list{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media screen and (min-width: 690px) {
+    .app-bar {
+      grid-template-columns: 1fr auto;
+      padding: 8px 32px;
+    }
+   
+    .app-bar .app-bar__brand h1 {
+      font-size: 1.5em;
+    }
+   
+    .app-bar .app-bar__menu {
+      display: none;
+    }
+   
+    .app-bar .app-bar__navigation {
+      position: static;
+      width: 100%;
+    }
+   
+    .app-bar .app-bar__navigation ul li {
+      display: inline-block;
+    }
+   
+    .app-bar .app-bar__navigation ul li a {
+      display: inline-block;
+      width: 95px;
+      text-align: center;
+      margin: 0;
+    }
+    .recommendation-list{
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .venue-list {
+      grid-template-columns: 1fr 1fr;
+    }
+   
+    .venue {
+      grid-template-columns: auto 1fr;
+    }
+   
+    .venue .venue__title {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+   
+    .venue .item__description {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+  }
+   
+  @media screen and (min-width: 800px) {
+    .app-bar .app-bar__brand h1 {
+      font-size: 2em;
+    }
+  }
+   
+  @media screen and (min-width: 850px) {
+    .venue-list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .recommendation-list{
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+   
+  @media screen and (min-width: 1200px) {
+    .venue-list {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+   
+  @media screen and (min-width: 1600px) {
+    .venue-list {
+        grid-template-columns: repeat(5, 1fr);
+    }
+  }
