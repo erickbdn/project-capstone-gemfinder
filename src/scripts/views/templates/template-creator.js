@@ -70,7 +70,7 @@ const createVenueRecommendationTemplate = (location) => `
       </h1>
       <p tabindex="0" class="venue-item__description">${location.description}</p>
     </div>
-    <a href="#/list" class="detailbtn">More ></a>
+    <a href="${`/#/detail/${location.id}`}" class="detailbtn">More ></a>
   </div>
 `;
 const createAboutUsTemplate = () => `
@@ -122,11 +122,7 @@ const createAboutUsTemplate = () => `
               <p>Sumber API Hidden Gem (survey): <a href="https://docs.google.com/forms/d/173q_HkLuMI_cCeoJqHOMlNuqhgvervj6LEPqetjD_Nk/edit#responses</a></p>
           </div>
 `;
-const createVenueRiskScoreTemplate = (data) => `
-  <div class="covid"
-  <h2> ${data.kota}</h2>
-  </div>
-`;
+
 
 const createLikeButtonTemplate = () => `
   <button aria-label="like this venue" id="likeButton" class="like">
@@ -144,7 +140,6 @@ export {
   createVenueItemTemplate,
   createVenueDetailTemplate,
   createVenueRecommendationTemplate,
-  createVenueRiskScoreTemplate,
   createAboutUsTemplate,
   createLikeButtonTemplate,
   createLikedButtonTemplate,
