@@ -115,6 +115,12 @@ const createAboutUsTemplate = () => `
                 <h3>Tederick Budiono</h3>
               </div>
             </div>
+          </div>
+          <div class="credits">
+              <h2>Credits</h2>
+              <p>Sumber gambar yang digunakan untuk API hidden gem: Google Maps</p>
+              <p>Sumber API Hidden Gem (survey): <a href="https://forms.gle/PnVARM8MNaMuaXsbA">Survey</a></p>
+          </div>
 `;
 const createVenueRiskScoreTemplate = (data) => `
   <div class="covid"
