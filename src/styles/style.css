@@ -349,6 +349,8 @@
   .venue__poster{
     position: relative;
     width: 100%;
+    border: 2px solid black;
+    border-bottom-style: none;
   }
   .venue__detail{
     width: 100%;
