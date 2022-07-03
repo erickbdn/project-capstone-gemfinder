@@ -36,6 +36,8 @@ const createVenueDetailTemplate = (detail) => `
     <p><i class="fa-solid fa-location-dot"></i></i>${detail.kabupatenkota}</p>
     <h4>Rating</h4>
     <p><i class="fa fa-star"></i>${detail.rating}</p>
+    <h4>Address <i class="fa fa-address-book"></i></h4>
+    <p>${detail.address}</p>
     <h4>Description <i class="fa fa-sort-desc"></i></h4>
     <p>${detail.description}</p>
     <h4>Overview</h4>
