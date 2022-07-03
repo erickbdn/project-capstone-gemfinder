@@ -234,9 +234,11 @@
     overflow: hidden;
     margin-bottom: 20px;
     position: relative;
+    transition: transform 0.2s;
   }
   .venue-item:hover {
       box-shadow: 0 2px 8px 2px rgba(181, 180, 184, 0.9);
+      transform: translateY(-10px);
   }
 
   .venue-item__header {
