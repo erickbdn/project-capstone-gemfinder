@@ -370,6 +370,7 @@
    }
    .venue__detail .venue__info{
      border: 2px solid black;
+     border-top-style: none;
      border-radius: 0 0 8px 8px;
      padding: 8px 8px;
    }
