@@ -119,7 +119,7 @@ const createAboutUsTemplate = () => `
           <div class="credits">
               <h2>Credits</h2>
               <p>Sumber gambar yang digunakan untuk API hidden gem: Google Maps</p>
-              <p>Sumber API Hidden Gem (survey): <a href="https://forms.gle/PnVARM8MNaMuaXsbA">Survey</a></p>
+              <p>Sumber API Hidden Gem (survey): <a href="https://docs.google.com/forms/d/173q_HkLuMI_cCeoJqHOMlNuqhgvervj6LEPqetjD_Nk/edit#responses</a></p>
           </div>
 `;
 const createVenueRiskScoreTemplate = (data) => `
