@@ -30,6 +30,9 @@
   .row-profile{
     grid-template-columns: repeat(1, 1fr);
   }
+  .col-4{
+    margin: 0 auto;
+  }
 }
 @media screen and (min-width: 690px) {
     .app-bar {
